@@ -24,7 +24,7 @@ def init_db():
   cursor.execute("""
   CREATE TABLE IF NOT EXISTS emails (
       id SERIAL PRIMARY KEY,
-      email TEXT NOT NULL,
+      email TEXT NOT NULL UNIQUE,
       last_seen TEXT
   )                             
   """)
